@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'balaswecha';
+  appsList = ["../assets/atomic-interactions_en.html", "../assets/balancing-act_en.html"]
 }
