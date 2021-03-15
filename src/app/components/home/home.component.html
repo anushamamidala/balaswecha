@@ -26,4 +26,19 @@
     </div>
 </div>
 
+<hr>
+
+<div class="container">
+    <div class="row" *ngFor="let i of subjects">
+        <div (click)="onClickSubject(i)" class="simulations">
+            <div class="card">
+                <img class="card-img-top" src='#'>
+                <div class="card-body">
+                    <p class="card-text">{{i.value}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <app-simulations [simulationItems]="simulationItems"></app-simulations>

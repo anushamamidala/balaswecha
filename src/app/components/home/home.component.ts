@@ -55,4 +55,12 @@ export class HomeComponent implements OnInit {
   onSelectSubject(value) {
     this.selectedSubject = value;
   }
+
+  onClickSubject(i) {
+    this.selectedOption = {
+      "selectedClass": "",
+      "selectedSubject":i.type
+    }
+    this.simulationItems = this.filterSubjectsClasses();
+  }
 }
