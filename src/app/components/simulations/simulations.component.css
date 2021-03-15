@@ -1,0 +1,10 @@
+.simulations {
+  cursor: pointer;
+  margin: 30px;
+  display: flex;
+  padding: 5px;
+}
+
+.simulations div {
+  margin: 10px;
+}

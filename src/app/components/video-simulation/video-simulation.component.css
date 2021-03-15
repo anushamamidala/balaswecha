@@ -1,0 +1,6 @@
+.frame-window iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 20vh);
+  border: none;
+}

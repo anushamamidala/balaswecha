@@ -1,0 +1,29 @@
+<div class="home-main-banner">
+    <div class="home-main-banner-heading">
+        <span>Learn,</span>
+        <span> Share &</span> <span>Explore</span>
+    </div>
+
+    <img src="../../../assets/main-banner.svg">
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <select class="form-control" #formClassSelect (change)="onSelectClass(formClassSelect.value)">
+                <option selected disabled>Select class</option>
+                <option *ngFor="let option of classes" [value]="option">Class {{option}}</option>
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="form-control" #formSubSelect (change)="onSelectSubject(formSubSelect.value)">
+                <option selected disabled>Select Subject</option>
+                <option *ngFor="let option of subjects" [value]="option.type">{{option.value}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="getCourses()">Get Courses!</button>
+    </div>
+</div>
+
+<app-simulations [simulationItems]="simulationItems"></app-simulations>

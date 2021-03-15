@@ -1,0 +1,22 @@
+.home-main-banner {
+  background-color: #fff0f454;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.home-main-banner-heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-main-banner-heading span {
+  font-size: xxx-large;
+  font-family: cursive;
+  align-self: center;
+  color: #3f3d56;
+}

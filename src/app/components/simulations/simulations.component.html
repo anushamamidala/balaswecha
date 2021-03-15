@@ -1,0 +1,8 @@
+<div class="simulations">
+    <div class="card" (click)="onClickSimulation(item)" *ngFor="let item of simulationItems;">
+        <img class="card-img-top" src='{{ "assets/" + item.img_src }}'>
+        <div class="card-body">
+            <p class="card-text">{{item.name}}</p>
+        </div>
+    </div>
+</div>
