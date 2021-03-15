@@ -8,7 +8,7 @@ import { Course } from 'src/app/shared/course';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  selectedClass = 4;
+  selectedClass = "";
   selectedSubject = 'all';
   selectedOption: any;
   simulationItems: Course[];
@@ -21,16 +21,32 @@ export class HomeComponent implements OnInit {
       this.simulationItems = response;
     })
   }
+
+  filterSubjectsClasses(): Course[] {
+    let items = [...this.simulationItems];
+    if (this.selectedOption?.selectedClass != "" && this.selectedOption?.selectedSubject === 'all') {
+      let filteredItems = items.filter(e =>
+        e.class.includes(parseInt(this.selectedOption?.selectedClass))
+      );
+      return filteredItems;
+    }
+    else if (this.selectedOption?.selectedClass === "" && this.selectedOption?.selectedSubject !== 'all') {
+      return items.filter(e => e.category === this.selectedOption?.selectedSubject
+      )
+    }
+    else {
+      return items.filter(e => (e.category === this.selectedOption?.selectedSubject) && (e.class.includes(parseInt(this.selectedOption?.selectedClass)))
+      )
+    }
+  }
+
   getCourses() {
     this.selectedOption = {
       "selectedClass": this.selectedClass,
       "selectedSubject": this.selectedSubject
     }
-
-    if (this.selectedOption?.selectedSubject !== 'all') {
-      console.log('here', this.selectedOption?.selectedSubject);
-      this.simulationItems = this.simulationItems.filter(e => e.category === this.selectedOption?.selectedSubject);
-    }
+    this.simulationItems = this.filterSubjectsClasses();
+    console.log(this.simulationItems);
   }
 
   onSelectClass(value) {
