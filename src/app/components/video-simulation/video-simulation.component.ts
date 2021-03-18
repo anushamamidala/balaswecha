@@ -12,7 +12,7 @@ export class VideoSimulationComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.route.snapshot.paramMap.get('simUrl');
-    this.item = "../assets/simulation-files" + id + ".html";
+    this.item = "../assets/simulation-files/" + id + ".html";
     console.log(this.item)
   }
 

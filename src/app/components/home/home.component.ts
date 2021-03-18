@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/shared/course';
 
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   mathsItems: Course[];
   biologyItems: Course[];
 
-  constructor(private router: Router, private service: CourseService) { }
+  constructor(private router: Router, private service: CourseService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.service.getJSON().subscribe((response: any) => {
@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
   onClickSubject(i) {
     this.selectedOption = {
       "selectedClass": "",
-      "selectedSubject":i.type
+      "selectedSubject": i.type
     }
     this.simulationItems = this.filterSubjectsClasses();
   }

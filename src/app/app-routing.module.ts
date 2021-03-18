@@ -10,13 +10,10 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'home/:subject', component: SimulationsComponent
-  },
-  {
-    path: 'videos', component: SimulationsComponent,
-  },
-  {
     path: 'videos/:simUrl', component: VideoSimulationComponent,
+  },
+  {
+    path: 'home/:subject', component: SimulationsComponent
   }
 ];
 

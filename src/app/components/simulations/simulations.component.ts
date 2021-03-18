@@ -23,6 +23,11 @@ export class SimulationsComponent implements OnInit {
 
   }
   onClickSimulation(item) {
-    this.router.navigate(['/videos', item.url]);
+    if (this.subject && this.subject != "") {
+      this.router.navigate(['../../videos', item.url], { relativeTo: this.route });
+    }
+    else {
+      this.router.navigate(['../videos', item.url], { relativeTo: this.route });
+    }
   }
 }
