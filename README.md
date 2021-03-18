@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
+## Development
+- [ ] Download Node on your machine `https://nodejs.org/en/download/`
+- [ ] Install angular-cli using `npm install -g @angular/cli`
+- [ ] Go to the project folder and install node modules using `npm i`
+- [ ] Run the web app using `ng serve`
+- [ ] Run the desktop app using `npm run desktop`
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
