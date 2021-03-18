@@ -8,6 +8,14 @@
         "class": [4,5]
     },
     {
+        "simID": "5",
+        "category": "phy",
+        "name": "Physics Simulation",
+        "img_src": "phy.jpg",
+        "url": "atomic-interactions_en",
+        "class": [4,5]
+    },
+    {
         "simID": "2",
         "category": "phy",
         "name": "Balancing act",
