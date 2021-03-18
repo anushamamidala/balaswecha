@@ -1,9 +1,35 @@
-<header>
-    <!-- <img src="./../../assets/images/log.png" alt="Logo" class="logoImage"> -->
-    <ul>
-        <li><a [routerLink]="['home']" class="active">Home</a></li>
-        <li><a>Videos</a></li>
-        <li><a>Blog</a></li>
-        <li><a>About</a></li>
+<header class="sidenav">
+    <img src="assets/bs-logo.png" class="header-image">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" [routerLink]="['home']">
+                <img src="/assets/icons/home.svg" alt="Home Icon" width="20" height="15">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <img src="/assets/icons/simulation.svg" alt="Home Icon" width="20" height="15">
+                Simulations</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <img src="/assets/icons/math.svg" alt="Home Icon" width="20" height="15"
+                    style="margin-right: 5px;">Maths</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"> <img src="/assets/icons/physics.svg" alt="Home Icon" width="20" height="20"
+                    style="margin-right: 5px;">Physics</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="/assets/icons/chemistry.svg" alt="Home Icon" width="20" height="20"
+                    style="margin-right: 5px;">Chemistry</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><img src="/assets/icons/biology.svg" alt="Home Icon" width="20" height="20"
+                    style="margin-right: 5px;">Biology</a>
+        </li>
+
     </ul>
+
 </header>

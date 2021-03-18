@@ -10,6 +10,9 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
+    path: 'home/:subject', component: SimulationsComponent
+  },
+  {
     path: 'videos', component: SimulationsComponent,
   },
   {

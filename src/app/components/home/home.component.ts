@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/shared/course';
 
@@ -12,18 +13,36 @@ export class HomeComponent implements OnInit {
   selectedSubject = 'all';
   selectedOption: any;
   simulationItems: Course[];
+  filteredSimulationItems: Course[];
   classes: number[] = [4, 5, 6, 7, 8, 9];
-  subjects = [{ type: "phy", value: "Physics" }, { type: "che", value: "Chemistry" }, { type: "math", value: "Maths" }, { type: "bio", value: "Biology" }]
-  constructor(private service: CourseService) { }
+  subjects = [{ type: "phy", value: "Physics", img: "assets/icons/physics-subject.svg" },
+  { type: "che", value: "Chemistry", img: "assets/icons/chemistry-subject.svg" },
+  { type: "math", value: "Maths", img: "assets/icons/math-subject.svg" },
+  { type: "bio", value: "Biology", img: "assets/icons/biology-subject.svg" }]
+  physicsItems: Course[];
+  chemistryItems: Course[];
+  mathsItems: Course[];
+  biologyItems: Course[];
+
+  constructor(private router: Router, private service: CourseService) { }
 
   ngOnInit(): void {
     this.service.getJSON().subscribe((response: any) => {
       this.simulationItems = response;
+      this.physicsItems = this.simulationItems.filter((e) => e.category === 'phy').splice(0, 4);
+      this.chemistryItems = this.simulationItems.filter((e) => e.category === 'che').splice(0, 4);
+      this.mathsItems = this.simulationItems.filter((e) => e.category === 'math').splice(0, 4);
+      this.biologyItems = this.simulationItems.filter((e) => e.category === 'bio').splice(0, 4);
+      console.log(this.physicsItems)
     })
   }
 
+  onClickOnSubj(type) {
+    this.router.navigate(['/home', type]);
+  }
+
   filterSubjectsClasses(): Course[] {
-    let items = [...this.simulationItems];
+    let items = this.simulationItems;
     if (this.selectedOption?.selectedClass != "" && this.selectedOption?.selectedSubject === 'all') {
       let filteredItems = items.filter(e =>
         e.class.includes(parseInt(this.selectedOption?.selectedClass))
@@ -54,5 +73,10 @@ export class HomeComponent implements OnInit {
   }
   onSelectSubject(value) {
     this.selectedSubject = value;
+    this.selectedOption = {
+      "selectedClass": this.selectedClass,
+      "selectedSubject": this.selectedSubject
+    }
+    this.filteredSimulationItems = this.filterSubjectsClasses();
   }
 }

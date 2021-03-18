@@ -1,8 +1,15 @@
-<div class="simulations">
-    <div class="card" (click)="onClickSimulation(item)" *ngFor="let item of simulationItems;">
-        <img class="card-img-top" src='{{ "assets/" + item.img_src }}'>
-        <div class="card-body">
-            <p class="card-text">{{item.name}}</p>
+<div class="simulation-cards" *ngIf="!subject || subject == ''">
+    <div class="simulation-card" (click)="onClickSimulation(item)" *ngFor="let item of simulationItems;">
+        <img src='{{ "assets/simulation-images/" + item.img_src }}' width="200px" height="100px">
+        <span>{{item.name}}</span>
+    </div>
+</div>
+<div class="simulation-container" *ngIf="subject && subject != ''">
+    <h3 class="heading-margin-popular-courses">Physics</h3>
+    <div class="simulation-cards">
+        <div class="simulation-card" (click)="onClickSimulation(item)" *ngFor="let item of simulationItems;">
+            <img src='{{ "assets/simulation-images/" + item.img_src }}' width="200px" height="100px">
+            <span>{{item.name}}</span>
         </div>
     </div>
 </div>

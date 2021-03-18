@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/shared/course';
 
 @Component({
@@ -9,10 +10,16 @@ import { Course } from 'src/app/shared/course';
 })
 export class SimulationsComponent implements OnInit {
   @Input() simulationItems: Course[];
-
-  constructor(private router: Router) { }
+  subject: string;
+  constructor(private router: Router, private route: ActivatedRoute, private service: CourseService) { }
 
   ngOnInit(): void {
+    this.subject = this.route.snapshot.paramMap.get('subject');
+    if (this.subject && this.subject != "") {
+      this.service.getJSON().subscribe((response: any) => {
+        this.simulationItems = response.filter((e) => e.category === this.subject);
+      })
+    }
 
   }
   onClickSimulation(item) {

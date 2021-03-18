@@ -1,10 +1,40 @@
-.simulations {
-  cursor: pointer;
-  margin: 30px;
-  display: flex;
-  padding: 5px;
+.simulation-container {
+  margin-left: 300px;
+  margin-top: 20px;
 }
 
-.simulations div {
+.simulation-cards {
+  display: flex;
+  width: 90%;
+}
+.simulation-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: flex-start;
   margin: 10px;
+}
+
+.simulation-card span {
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.heading-margin-popular-courses {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.heading-margin-popular-courses:after {
+  background: none repeat scroll 0 0 #f7941e;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 3px;
+  position: relative;
+  width: 100px;
+  margin-bottom: 50px;
 }

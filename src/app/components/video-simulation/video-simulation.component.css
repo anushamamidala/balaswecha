@@ -3,4 +3,5 @@
   width: 100%;
   height: calc(100vh - 20vh);
   border: none;
+  margin-left: 250px;
 }

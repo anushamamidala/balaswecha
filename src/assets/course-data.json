@@ -2,33 +2,81 @@
     {
         "simID": "1",
         "category": "phy",
-        "name": "Physics Simulation",
-        "img_src": "phy.jpg",
+        "name": "Atomic Interactions",
+        "img_src": "atomic-interactions_en.PNG",
         "url": "atomic-interactions_en",
         "class": [4,5]
     },
     {
         "simID": "2",
-        "category": "bio",
-        "name": "Biology Simulation",
-        "img_src": "bio.jpg",
+        "category": "phy",
+        "name": "Balancing act",
+        "img_src": "balancing-act_en.PNG",
         "url": "balancing-act_en",
-        "class": [6,7]
+        "class": [4,5]
     },
     {
         "simID": "3",
-        "category": "che",
-        "name": "Physics Simulation",
-        "img_src": "che.jpg",
-        "url": "atomic-interactions_en",
-        "class": [8]
+        "category": "phy",
+        "name": "Ballons and Static Electricity",
+        "img_src": "balloons-and-static-electricity_en.PNG",
+        "url": "balloons-and-static-electricity_en",
+        "class": [4,5]
     },
     {
         "simID": "4",
-        "category": "math",
-        "name": "Mathematics Simulation",
-        "img_src": "math.jpg",
-        "url": "atomic-interactions_en",
-        "class": [4]
-    }    
+        "category": "phy",
+        "name": "Bending Light",
+        "img_src": "bending-light_en.PNG",
+        "url": "bending-light_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "5",
+        "category": "phy",
+        "name": "Blackbody Spectrum",
+        "img_src": "blackbody-spectrum_en.PNG",
+        "url": "blackbody-spectrum_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "6",
+        "category": "che",
+        "name": "Acid Base Solutions",
+        "img_src": "acid-base-solutions_en.PNG",
+        "url": "acid-base-solutions_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "7",
+        "category": "che",
+        "name": "Balancing Chemical Equations",
+        "img_src": "balancing-chemical-equations_en.PNG",
+        "url": "balancing-chemical-equations_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "8",
+        "category": "che",
+        "name": "Diffusion",
+        "img_src": "diffusion_en.PNG",
+        "url": "diffusion_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "9",
+        "category": "che",
+        "name": "Gas Properties",
+        "img_src": "gas-properties_en.PNG",
+        "url": "gas-properties_en",
+        "class": [4,5]
+    },
+    {
+        "simID": "10",
+        "category": "che",
+        "name": "Reactants Produts",
+        "img_src": "reactants-products-and-leftovers_en.PNG",
+        "url": "reactants-products-and-leftovers_en",
+        "class": [4,5]
+    }
 ]

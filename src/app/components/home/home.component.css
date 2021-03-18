@@ -20,3 +20,70 @@
   align-self: center;
   color: #3f3d56;
 }
+
+.home-container {
+  margin-left: 250px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #ff8f3e;
+  border-color: #ff8f3e;
+}
+
+.subject-container {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+.subject-cards {
+  margin-top: 20px;
+  display: flex;
+  width: 90%;
+}
+.subject-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 200px;
+  align-items: center;
+  border: 1px solid #eef0f0;
+  padding: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 4px 4px 4px 4px #eef0f0;
+  margin-right: 50px;
+}
+
+.subject-card span {
+  margin-top: 15px;
+}
+
+.heading-margin {
+  margin-left: 10px;
+  font-size: 1.25rem !important;
+}
+
+.heading-margin-popular-courses {
+  margin-left: 50px;
+  font-weight: 400;
+}
+
+.heading-margin-popular-courses:after {
+  background: none repeat scroll 0 0 #f7941e;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 3px;
+  position: relative;
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+.simulations-subjects-container {
+  margin-left: 40px;
+  padding-top: 30px;
+  width: 60%;
+  border-radius: 15px;
+  border: 1px solid #eef0f0;
+}

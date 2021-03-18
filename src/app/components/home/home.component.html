@@ -1,29 +1,33 @@
-<div class="home-main-banner">
-    <div class="home-main-banner-heading">
-        <span>Learn,</span>
-        <span> Share &</span> <span>Explore</span>
+<div class="home-container">
+    <div class="subject-container">
+        <h3>Choose Subject</h3>
+        <div class="subject-cards">
+            <div class="subject-card" (click)="onClickOnSubj(item.type)" *ngFor="let item of subjects">
+                <img [src]="item.img" height="60px" width="60px">
+                <span>{{item.value}}</span>
+            </div>
+        </div>
     </div>
-
-    <img src="../../../assets/main-banner.svg">
-</div>
-
-<div class="container mt-5 mb-5">
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <select class="form-control" #formClassSelect (change)="onSelectClass(formClassSelect.value)">
-                <option selected disabled>Select class</option>
-                <option *ngFor="let option of classes" [value]="option">Class {{option}}</option>
-            </select>
+    <div class="simulations-subjects-container">
+        <h3 class="heading-margin-popular-courses">Explore Simulations</h3>
+        <div class="subject-container" *ngIf="physicsItems?.length>0">
+            <h3 class="heading-margin">Physics</h3>
+            <app-simulations [simulationItems]="physicsItems"></app-simulations>
         </div>
 
-        <div class="col-3">
-            <select class="form-control" #formSubSelect (change)="onSelectSubject(formSubSelect.value)">
-                <option selected disabled>Select Subject</option>
-                <option *ngFor="let option of subjects" [value]="option.type">{{option.value}}</option>
-            </select>
+        <div class="subject-container" *ngIf="chemistryItems?.length>0">
+            <h3 class="heading-margin">Chemistry</h3>
+            <app-simulations [simulationItems]="chemistryItems"></app-simulations>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="getCourses()">Get Courses!</button>
+
+        <div class="subject-container" *ngIf="mathsItems?.length>0">
+            <h3 class="heading-margin">Mathematics</h3>
+            <app-simulations [simulationItems]="mathsItems"></app-simulations>
+        </div>
+
+        <div class="subject-container" *ngIf="biologyItems?.length>0">
+            <h3 class="heading-margin">Biology</h3>
+            <app-simulations [simulationItems]="biologyItems"></app-simulations>
+        </div>
     </div>
 </div>
-
-<app-simulations [simulationItems]="simulationItems"></app-simulations>
